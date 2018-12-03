@@ -9,7 +9,7 @@ igraph <- graph_from_data_frame(edges);
 nwd3 <- igraph_to_networkD3(igraph);
 forceNetwork(Links = nwd3$links, Nodes = nwd3$nodes, 
              Source = 'source', Target = 'target', 
-             NodeID = 'name', Group = 'name')  %>%
+             NodeID = 'name', Group = 'name', zoom = TRUE)  %>%
   saveNetwork(file = 'edges.html');
 #Now open the HTML file in your brwoser. This should perform much better than the Viewer of RStudio.
 
